@@ -73,7 +73,7 @@
 /**
  *  show banner text at the top of the TFT in Marlin Mode.
  */
-#define ST7920_SHOW_BANNER true //to enabled: true | to disabled: false
+#define ST7920_SHOW_BANNER false //to enabled: true | to disabled: false
 /**
  * Run Marlin Mode in Fullscreen
  *
@@ -190,9 +190,9 @@
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 235
-#define Y_MAX_POS 235
-#define Z_MAX_POS 250
+#define X_MAX_POS 220
+#define Y_MAX_POS 220
+#define Z_MAX_POS 300
 
 // Specify a pause position as { X, Y, Z_raise }
 #define NOZZLE_PAUSE_RETRACT_LENGTH 15   // (mm)
