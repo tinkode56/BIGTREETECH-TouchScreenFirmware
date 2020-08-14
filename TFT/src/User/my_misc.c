@@ -16,6 +16,15 @@ int limitValue(int min, int value, int max)
   return value;
 }
 
+float limitFloat(float min, float value, float max)
+{
+  if(value<min)
+    return min;
+  if(value>max)
+    return max;
+  return value;
+}
+
 long map(long x, long in_min, long in_max, long out_min, long out_max)
 {
   return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -169,7 +178,7 @@ void my_sprintf(char *buf, const char *fmt, ...)
 uint8_t string_2_uint8_t(const uint8_t *string)
 {
 	uint8_t rtv = 0;
-	for (char i = 0; i < 2; i++)
+	for (unsigned char i = 0; i < 2; i++)
 	{
 		rtv <<= 4;
 		if (string[i] >= '0' && string[i] <= '9')
@@ -188,7 +197,7 @@ uint8_t string_2_uint8_t(const uint8_t *string)
 // 0x2C to "2C"
 uint8_t *uint8_2_string(uint8_t num, uint8_t *string)
 {
-	for (char i = 0; i < 2; i++)
+	for (unsigned char i = 0; i < 2; i++)
 	{
 		uint8_t _4bits = (num & 0xF0) >> 4;
 		if (_4bits >= 0 && _4bits <= 9)
